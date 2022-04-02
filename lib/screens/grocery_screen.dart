@@ -13,7 +13,7 @@ class GroceryScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          // TODO: Create New Item
+          context.read<GroceryManager>().createNewItem();
         },
       ),
       body: buildGroceryScreen(),
