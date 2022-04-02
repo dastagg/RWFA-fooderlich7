@@ -56,7 +56,6 @@ class _HomeState extends State<Home> {
             currentIndex: widget.currentTab,
             onTap: (index) {
               context.read<AppStateManager>().goToTab(index);
-              
             },
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
@@ -89,7 +88,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         onTap: () {
-          // TODO: home -> profile
+          context.read<ProfileManager>().tapOnProfile(true);
         },
       ),
     );
