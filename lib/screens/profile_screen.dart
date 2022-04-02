@@ -57,13 +57,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ListTile(
           title: const Text('View raywenderlich.com'),
           onTap: () {
-            // TODO: Open raywenderlich.com webview
+            context.read<ProfileManager>().tapOnRaywenderlich(true);
           },
         ),
         ListTile(
           title: const Text('Log out'),
           onTap: () {
-            // TODO: Logout user
+            context.read<ProfileManager>().tapOnProfile(false);
+            context.read<AppStateManager>().logout();
           },
         )
       ],
